@@ -89,14 +89,14 @@ func insensitiviseVal(val any) any {
 func insensitiviseMap(m map[string]any) {
 	for key, val := range m {
 		val = insensitiviseVal(val)
-		lower := strings.ToLower(key)
+		//lower := strings.ToLower(key)
 		//FIX:这里不删除
 		//if key != lower {
 		//	// remove old key (not lower-cased)
 		//	delete(m, key)
 		//}
 		// update map
-		m[lower] = val
+		m[key] = val
 	}
 }
 
